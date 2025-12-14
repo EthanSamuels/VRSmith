@@ -10,10 +10,12 @@ public class HeightChange : MonoBehaviour
     public void AddHeight()
 	{
 		cc.height += changeBy;
+		cc.Move(Vector3.up * changeBy/2);
 	}
 	
 	public void LoseHeight()
 	{
 		cc.height -= changeBy;
+		cc.Move(Vector3.down * changeBy/2);
 	}
 }
